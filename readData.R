@@ -11,7 +11,7 @@ hpcfile <- "exdata-data-household_power_consumption/household_power_consumption.
 hpcraw <- read.csv.sql(hpcfile, sep=";",sql = 'Select * From file where Date = "1/2/2007" OR Date = "2/2/2007" ')
 
 # close connection
-close(hpcfile)
+sqldf()
 
 # check to see if there's missing data
 # which(apply(X = hpcraw, MARGIN = 2, FUN = function(x) any(grepl("\\?", x))))
