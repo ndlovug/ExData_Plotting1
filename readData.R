@@ -10,7 +10,8 @@ hpcfile <- "exdata-data-household_power_consumption/household_power_consumption.
 ## read file and select rows based on string "1/1/2007" and store in dataframe DF
 hpcraw <- read.csv.sql(hpcfile, sep=";",sql = 'Select * From file where Date = "1/2/2007" OR Date = "2/2/2007" ')
 
-# close connection
+# close connections
+#close(hpcfile)
 sqldf()
 
 # check to see if there's missing data
