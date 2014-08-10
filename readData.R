@@ -20,8 +20,5 @@ sqldf()
 # concatenate Date & Time columns to create a datetime column
 hpcraw$datetime <- with(hpcraw, paste(Date, Time, sep = " "))
 
-# format datetime as date
-hpcraw$datetime <- with(hpcraw, strptime(x = datetime, format = "%d/%m/%Y %H:%M:%S"))
-
 
 
