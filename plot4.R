@@ -84,6 +84,7 @@ with(plot3df,
 legend("topright", 
        legend = c("Sub_metering_1", "Sub_metering_2", "Sub_metering_3"), 
        lty = c(1, 1),
+       bty = "n",
        col = c("black", "red", "blue")
        )
 
