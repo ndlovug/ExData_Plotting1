@@ -1,6 +1,9 @@
 # read in the data
 source("readData.R")
 
+# format datetime as date
+hpcraw$datetime <- with(hpcraw, strptime(x = datetime, format = "%d/%m/%Y %H:%M:%S"))
+
 hpcdf <- hpcraw
 
 # set plot size 
